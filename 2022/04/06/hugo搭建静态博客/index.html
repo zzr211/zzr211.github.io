@@ -1,0 +1,581 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Jauruei" href="https://zzr211.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Jauruei" href="https://zzr211.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Jauruei" href="https://zzr211.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+
+<link rel="canonical" href="https://zzr211.github.io/2022/04/06/hugo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/">
+
+
+
+  <title>
+Hugo 搭建静态博客网站 |
+Jau Ruei = Jauruei</title>
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">Hugo 搭建静态博客网站
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2022-04-06 05:11:45">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-04-06T05:11:45+08:00">2022-04-06</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>3.8k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>3 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Jau Ruei</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicitspjpbj20zk0m81ky.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicivghyooj20zk0m8dir.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipevgoki5j20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicit31ffoj20zk0m8naf.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclffsa1cj20zk0m811l.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicis081o9j20zk0m8dmr.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://zzr211.github.io/2022/04/06/hugo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="ZR">
+    <meta itemprop="description" content=", 睿的学习 & 折腾笔记">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Jauruei">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="1安装hugo"><a class="markdownIt-Anchor" href="#1安装hugo">#</a> 1. 安装 hugo</h1>
+<h2 id="1下载hugo"><a class="markdownIt-Anchor" href="#1下载hugo">#</a> （1）下载 hugo</h2>
+<p>选择下载 hugo 的 extend 版本，我下载的是 hugo_extended_0.96.0_Windows-64bit.zip</p>
+<p>地址：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2dvaHVnb2lvL2h1Z28vcmVsZWFzZXM=">https://github.com/gohugoio/hugo/releases</span></p>
+<p>解压得到 hugo.exe，将 hugo.exe 复制到本地建站目录，比如：</p>
+<p>C:\Users\ZR\Documents\GitHub\hugo</p>
+<h2 id="2添加至path"><a class="markdownIt-Anchor" href="#2添加至path">#</a> （2）添加至 Path</h2>
+<p>将 hugo.exe 所在目录添加至系统环境变量（我的电脑 - 属性 - 高级系统设置 - 环境变量 - 系统变量 - Path - 浏览添加）</p>
+<p>或者将 hugo 下载至命令行所在文件夹，然后将下载的 hugo 文件夹加入 Path 中</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/gohugoio/hugo.git  </span><br></pre></td></tr></table></figure>
+<h2 id="3确认是否成功"><a class="markdownIt-Anchor" href="#3确认是否成功">#</a> （3）确认是否成功</h2>
+<p>安装完成后，输入以下命令来确认。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hugo version</span><br></pre></td></tr></table></figure>
+<p>出现下列内容即成功</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hugo v0.96.0-2fd4a7d3d6845e75f8b8ae3a2a7bd91438967bbb+extended windows/amd64 BuildDate=2022-03-26T09:15:58Z VendorInfo=gohugoio</span><br></pre></td></tr></table></figure>
+<h1 id="2创建hugo站点"><a class="markdownIt-Anchor" href="#2创建hugo站点">#</a> 2. 创建 hugo 站点</h1>
+<h2 id="1选择hugo网站目录"><a class="markdownIt-Anchor" href="#1选择hugo网站目录">#</a> （1）选择 hugo 网站目录</h2>
+<h2 id="2执行命令新建hugo网站"><a class="markdownIt-Anchor" href="#2执行命令新建hugo网站">#</a> （2）执行命令新建 hugo 网站</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hugo new site zrnote  <span class="comment"># &quot;zrnote&quot; 是我的网站文件夹名。</span></span><br></pre></td></tr></table></figure>
+<p>新建的网站目录大概包含这些目录 ——C:\Users\ZR\Documents\GitHub\hugo\config.toml、hugo.exe、archetypes、content、data、layouts、static、themes</p>
+<ul>
+<li><strong>archetypes</strong>: 储存 <code>.md</code>  的模板文件，类似于 <code>hexo</code>  的 <code>scaffolds</code> ，该文件夹的优先级高于主题下的 <code>/archetypes</code>  文件夹</li>
+<li><strong>config.toml</strong>: 配置文件</li>
+<li><strong>content</strong>: 储存网站的所有内容，类似于 <code>hexo</code>  的 <code>source</code></li>
+<li><strong>data</strong>: 储存数据文件供模板调用，类似于 <code>hexo</code>  的 <code>source/_data</code></li>
+<li><strong>layouts</strong>: 储存 <code>.html</code>  模板，该文件夹的优先级高于主题下的 <code>/layouts</code>  文件夹</li>
+<li><strong>static</strong>: 储存图片，css,js 等静态文件，该目录下的文件会直接拷贝到 <code>/public</code> ，该文件夹的优先级高于主题下的 <code>/static</code>  文件夹</li>
+<li><strong>themes</strong>: 储存主题</li>
+<li><strong>public</strong>: 执行 <code>hugo</code>  命令后，储存生成的静态文件</li>
+</ul>
+<h2 id="3本地预览"><a class="markdownIt-Anchor" href="#3本地预览">#</a> （3）本地预览</h2>
+<p>使用以下命令本地预览 hugo 博客</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hugo server</span><br></pre></td></tr></table></figure>
+<p>输出</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">Start building sites …</span><br><span class="line">hugo v0.96.0-2fd4a7d3d6845e75f8b8ae3a2a7bd91438967bbb+extended windows/amd64 BuildDate=2022-03-26T09:15:58Z VendorInfo=gohugoio</span><br><span class="line"></span><br><span class="line">                   | ZH</span><br><span class="line">-------------------+-----</span><br><span class="line">  Pages            | 10</span><br><span class="line">  Paginator pages  |  0</span><br><span class="line">  Non-page files   |  0</span><br><span class="line">  Static files     | 10</span><br><span class="line">  Processed images |  0</span><br><span class="line">  Aliases          |  1</span><br><span class="line">  Sitemaps         |  1</span><br><span class="line">  Cleaned          |  0</span><br><span class="line"></span><br><span class="line">Built <span class="keyword">in</span> 185 ms</span><br><span class="line">Watching <span class="keyword">for</span> changes <span class="keyword">in</span> C:\Users\赵睿\Documents\GitHub\zrnote\&#123;archetypes,content,data,layouts,static,themes&#125;</span><br><span class="line">Watching <span class="keyword">for</span> config changes <span class="keyword">in</span> C:\Users\赵睿\Documents\GitHub\zrnote\config.toml</span><br><span class="line">Environment: <span class="string">&quot;development&quot;</span></span><br><span class="line">Serving pages from memory</span><br><span class="line">Running <span class="keyword">in</span> Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender</span><br><span class="line">Web Server is available at http://localhost:1313/ (<span class="built_in">bind</span> address 127.0.0.1)</span><br></pre></td></tr></table></figure>
+<p>倒数第二行提供了博客的地址<strong> localhost:1313</strong>，但现在的博客还是一片空白，因此需要添加一个主题</p>
+<h2 id="4添加主题"><a class="markdownIt-Anchor" href="#4添加主题">#</a> （4）添加主题</h2>
+<p>方法一：直接复制到  <code>themes</code>  目录下</p>
+<p>方法二：通过  <code>git submodule</code>  的方式放在  <code>themes</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git init;</span><br><span class="line">git submodule add https://github.com/olOwOlo/hugo-theme-even.git themes/even</span><br></pre></td></tr></table></figure>
+<h2 id="5编辑配置文件"><a class="markdownIt-Anchor" href="#5编辑配置文件">#</a> （5）编辑配置文件</h2>
+<p>编辑你的 config.toml 配置文件使用该主题</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;theme = &quot;even&quot;&#x27;</span> &gt;&gt; config.toml</span><br></pre></td></tr></table></figure>
+<p>其他的参考所选 hugo 主题的配置说明，编辑  <code>config.toml</code>  文件。</p>
+<p><strong>注意</strong>： <code>theme</code>  配置项指的是所选主题的名称，必须与所选主题被克隆至的目录名相同。在本例中，即  <code>theme = &quot;even&quot;</code></p>
+<h1 id="3新建文章"><a class="markdownIt-Anchor" href="#3新建文章">#</a> 3. 新建文章</h1>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hugo new post/my-first-post.md</span><br></pre></td></tr></table></figure>
+<p>将会在  <code>content/post/</code>  创建文件  <code>my-first-post.md</code> , 然后编辑这个文件来写文章</p>
+<p>文章写完后去掉文件中的  <code>draft=true</code>  或者修改 true 为 false, 不然生成到  <code>public</code>  中</p>
+<h1 id="4生成静态网站"><a class="markdownIt-Anchor" href="#4生成静态网站">#</a> 4. 生成静态网站</h1>
+<p>在 hugo server 调试预览页面完成后，使用  <code>hugo</code>  命令生成 hugo 静态页面。</p>
+<p>** 注意！！！** 在生成静态页面之前要把 config.toml 文件中的 baseURL 修改为自己博客的网址，譬如</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">baseURL = <span class="string">&quot;https://zzr211.github.io/&quot;</span></span><br><span class="line">hugo    <span class="comment">##生成静态页面文件</span></span><br></pre></td></tr></table></figure>
+<p>在命令执行后，出现一个 public 文件夹，里面就是网站的静态页面文件</p>
+<h1 id="5博客部署到github"><a class="markdownIt-Anchor" href="#5博客部署到github">#</a> 5. 博客部署到 GitHub</h1>
+<h2 id="1新建仓库"><a class="markdownIt-Anchor" href="#1新建仓库">#</a> （1）新建仓库</h2>
+<p>在 GitHub 建立远程仓库，创建一个名为<username>.github.io 的公有库，该库用来显示你的博客静态页面，其中的 username 换成自己的 github 名字。</p>
+<h2 id="2git-本地库关联至远程库"><a class="markdownIt-Anchor" href="#2git-本地库关联至远程库">#</a> （2）Git 本地库关联至远程库</h2>
+<p>把远程库和本地 public 文件夹进行对应。在 public 文件夹下执行命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github.com:&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git</span><br></pre></td></tr></table></figure>
+<h2 id="3public文件夹内容推送到github仓库"><a class="markdownIt-Anchor" href="#3public文件夹内容推送到github仓库">#</a> （3）public 文件夹内容推送到 GitHub 仓库</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;first commit&quot;</span></span><br><span class="line">git push  -u origin master</span><br></pre></td></tr></table></figure>
+<h2 id="4等待自动部署"><a class="markdownIt-Anchor" href="#4等待自动部署">#</a> （4）等待自动部署</h2>
+<p>等待几十秒至一分钟，打开网址 https://username.github.io 就可以看到自己的博客</p>
+<h1 id="6更新博客网站内容"><a class="markdownIt-Anchor" href="#6更新博客网站内容">#</a> 6. 更新博客网站内容</h1>
+<p>之后要添加博客内容或修改网站，使用如下几步即可：</p>
+<p>（1）编辑</p>
+<p>（2） <code>hugo server</code>  本地预览效果</p>
+<p>（3） <code>hugo</code>  构建 hugo 网站</p>
+<p>（4）提交修改至 Git 本地库，再将修改推至远程库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> public</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;upload blog&quot;</span></span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+<p>懒得用命令也可以采用 GitHub Desktop 来完成这一步</p>
+<h1 id="7为站点加速"><a class="markdownIt-Anchor" href="#7为站点加速">#</a> 7. 为站点加速</h1>
+<h2 id="1托管到vercel和netlify"><a class="markdownIt-Anchor" href="#1托管到vercel和netlify">#</a> （1）托管到 vercel 和 Netlify</h2>
+<p>github pages 在有些地区访问速度较慢，因此可以将博客托管到 vercel 和 Netlify 以此获得更好的访问效果</p>
+<p>#vercel：如果导入的项目是打包好的静态页，在  <code>Build and Output Settings</code>  的  <code>override</code>  都勾上，表示不执行它的默认命令</p>
+<p>#与 Github 绑定完成后每一次提交代码到 Github，便会自动发布至 vercel 和 Netlify</p>
+<h2 id="2部署到国内代码托管平台"><a class="markdownIt-Anchor" href="#2部署到国内代码托管平台">#</a> （2）部署到国内代码托管平台</h2>
+<p>比如 Gitee 和 Coding 等</p>
+<h2 id="3采用-cdn-加速"><a class="markdownIt-Anchor" href="#3采用-cdn-加速">#</a> （3）采用 CDN 加速</h2>
+<p>使用免费的 Cloudflare CDN 和 jsDelivr</p>
+<h1 id="参考链接"><a class="markdownIt-Anchor" href="#参考链接">#</a> 参考链接</h1>
+<p><span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8zOTc2MTI5MDA=">使用 hugo 生成静态博客并部署在 GitHub 上</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9jeWhvdXIuY29tLzEyMjYv">世界上最快静态博客生成工具 Hugo 入门折腾</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FpYW55aW5laS9hcnRpY2xlL2RldGFpbHMvMTIyMzYzMjUw">hugo 搭建静态博客</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC80NzgxOTE2MjY=">Hugo+GitHub Pages 搭建个人网站</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC81NzM2MTY5Nw==">如何利用 GitHub Pages 和 Hugo 轻松搭建个人博客？</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9vbG93b2xvLmNvbS9wb3N0L2h1Z28tcXVpY2stc3RhcnQvIyVFNiVCNyVCQiVFNSU4QSVBMCVFNCVCOCU4MCVFNCVCOCVBQSVFNCVCOCVCQiVFOSVBMiU5OA==">Hugo 从入门到会用</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9qb3V5b3V5dW4uZ2l0aHViLmlvL3Bvc3QvaHVnby1naXRodWIvIyVFOSVBMiU4NCVFOCVBNyU4OA==">使用 hugo 写博客</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9jeWhvdXIuY29tLzEyMzEv">Gridea 一个静态博客写作客户端 搭建免费静态博客 CDN 加速</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9tYXpodWFuZy5vcmcvMjAyMC8wNS8wMS9jZG4tZm9yLWdpdGh1Yi1wYWdlcy8jJUU1JTg1JTg4JUU3JTlDJThCJUU2JTk1JTg4JUU2JTlFJTlD">使用 jsDelivr 免费加速 GitHub Pages 博客的静态资源</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9tYXpodWFuZy5vcmcvMjAyMC8xMC8wNy9jZG4tZm9yLWdpdGh1Yi1wYWdlcy0yLw==">使用 jsDelivr 免费加速 GitHub Pages 博客的静态资源（二）</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MDAxMzgxNy9hcnRpY2xlL2RldGFpbHMvMTIyODc5NDU2">Github Pages 速度慢 vercel 部署静态博客</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLjUxY3RvLmNvbS91XzE1MzAzODkwLzMxODQ4MDc=">Github Pages 访问太慢？通过 Netlify 免费加速</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9pLnZpbmNlLnB1Yi9wL2hleG8tc3RhdGljLw==">常见静态网站托管平台使用及多节点部署方案</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmZsdWlkLWRldi5jb20vcG9zdHMvaGV4by1zdGF0aWMv">https://hexo.fluid-dev.com/posts/hexo-static/</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9haWdpc3NzLmNvbS9ibG9nL3Bvc3RzLzk2MDRlMmMxLmh0bWw=">https://aigisss.com/blog/posts/9604e2c1.html</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hhbmd2YW5lMTIzL2FydGljbGUvZGV0YWlscy8xMTM3NTEzODc=">【经验】静态博客部署 Hexo + Netlify-CMS + Vercel （在线构建）</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9qaW1teXFpbi5jb20vcG9zdHMvMTkxNjkuaHRtbA==">可能是最全的静态托管平台收集</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuY2F5emxoLmNvbS9wb3N0LzIwMjEwNTE1Lw==">打造一个舒服的写作环境（Hexo）</span></p>
+
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2022-07-10 19:27:34" itemprop="dateModified" datetime="2022-07-10T19:27:34+08:00">2022-07-10</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="ZR 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="ZR 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="ZR 贝宝">
+        <p>贝宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>ZR <i class="ic i-at"><em>@</em></i>Jauruei
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://zzr211.github.io/2022/04/06/hugo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" title="Hugo 搭建静态博客网站">https://zzr211.github.io/2022/04/06/hugo搭建静态博客/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2022/04/06/hugo%E5%92%8Chexo%E4%B8%BB%E9%A2%98/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipesrnqv3j20zk0m8ava.jpg" title="Hugo和hexo主题">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>Hugo和hexo主题</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1%E5%AE%89%E8%A3%85hugo"><span class="toc-number">1.</span> <span class="toc-text"> 1. 安装 hugo</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E4%B8%8B%E8%BD%BDhugo"><span class="toc-number">1.1.</span> <span class="toc-text"> （1）下载 hugo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E6%B7%BB%E5%8A%A0%E8%87%B3path"><span class="toc-number">1.2.</span> <span class="toc-text"> （2）添加至 Path</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E7%A1%AE%E8%AE%A4%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F"><span class="toc-number">1.3.</span> <span class="toc-text"> （3）确认是否成功</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2%E5%88%9B%E5%BB%BAhugo%E7%AB%99%E7%82%B9"><span class="toc-number">2.</span> <span class="toc-text"> 2. 创建 hugo 站点</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E9%80%89%E6%8B%A9hugo%E7%BD%91%E7%AB%99%E7%9B%AE%E5%BD%95"><span class="toc-number">2.1.</span> <span class="toc-text"> （1）选择 hugo 网站目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E6%89%A7%E8%A1%8C%E5%91%BD%E4%BB%A4%E6%96%B0%E5%BB%BAhugo%E7%BD%91%E7%AB%99"><span class="toc-number">2.2.</span> <span class="toc-text"> （2）执行命令新建 hugo 网站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E6%9C%AC%E5%9C%B0%E9%A2%84%E8%A7%88"><span class="toc-number">2.3.</span> <span class="toc-text"> （3）本地预览</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E6%B7%BB%E5%8A%A0%E4%B8%BB%E9%A2%98"><span class="toc-number">2.4.</span> <span class="toc-text"> （4）添加主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E7%BC%96%E8%BE%91%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">2.5.</span> <span class="toc-text"> （5）编辑配置文件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3%E6%96%B0%E5%BB%BA%E6%96%87%E7%AB%A0"><span class="toc-number">3.</span> <span class="toc-text"> 3. 新建文章</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4%E7%94%9F%E6%88%90%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99"><span class="toc-number">4.</span> <span class="toc-text"> 4. 生成静态网站</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0github"><span class="toc-number">5.</span> <span class="toc-text"> 5. 博客部署到 GitHub</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93"><span class="toc-number">5.1.</span> <span class="toc-text"> （1）新建仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2git-%E6%9C%AC%E5%9C%B0%E5%BA%93%E5%85%B3%E8%81%94%E8%87%B3%E8%BF%9C%E7%A8%8B%E5%BA%93"><span class="toc-number">5.2.</span> <span class="toc-text"> （2）Git 本地库关联至远程库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3public%E6%96%87%E4%BB%B6%E5%A4%B9%E5%86%85%E5%AE%B9%E6%8E%A8%E9%80%81%E5%88%B0github%E4%BB%93%E5%BA%93"><span class="toc-number">5.3.</span> <span class="toc-text"> （3）public 文件夹内容推送到 GitHub 仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E7%AD%89%E5%BE%85%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2"><span class="toc-number">5.4.</span> <span class="toc-text"> （4）等待自动部署</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6%E6%9B%B4%E6%96%B0%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E5%86%85%E5%AE%B9"><span class="toc-number">6.</span> <span class="toc-text"> 6. 更新博客网站内容</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7%E4%B8%BA%E7%AB%99%E7%82%B9%E5%8A%A0%E9%80%9F"><span class="toc-number">7.</span> <span class="toc-text"> 7. 为站点加速</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E6%89%98%E7%AE%A1%E5%88%B0vercel%E5%92%8Cnetlify"><span class="toc-number">7.1.</span> <span class="toc-text"> （1）托管到 vercel 和 Netlify</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E9%83%A8%E7%BD%B2%E5%88%B0%E5%9B%BD%E5%86%85%E4%BB%A3%E7%A0%81%E6%89%98%E7%AE%A1%E5%B9%B3%E5%8F%B0"><span class="toc-number">7.2.</span> <span class="toc-text"> （2）部署到国内代码托管平台</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E9%87%87%E7%94%A8-cdn-%E5%8A%A0%E9%80%9F"><span class="toc-number">7.3.</span> <span class="toc-text"> （3）采用 CDN 加速</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"><span class="toc-number">8.</span> <span class="toc-text"> 参考链接</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="ZR"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">ZR</p>
+  <div class="description" itemprop="description">睿的学习 & 折腾笔记</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">7</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3p6cjIxMQ==" title="https:&#x2F;&#x2F;github.com&#x2F;zzr211"><i class="ic i-github"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/04/06/hexo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" title="Hexo搭建静态博客">Hexo搭建静态博客</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/07/10/hello-world/" title="Hello World">Hello World</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/07/09/%E5%9F%9F%E5%90%8D%E6%AF%94%E4%BB%B7%E4%B8%8E%E6%B3%A8%E5%86%8C/" title="域名比价与注册">域名比价与注册</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/04/21/%E8%8B%B1%E8%AF%AD%E9%AB%98%E9%A2%91%E5%8D%95%E8%AF%8D%E8%A1%A8NGSL+NAWL/" title="英语高频单词表NGSL+NAWL">英语高频单词表NGSL+NAWL</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/04/06/hugo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" title="Hugo搭建静态博客网站">Hugo搭建静态博客网站</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/04/06/hugo%E5%92%8Chexo%E4%B8%BB%E9%A2%98/" title="Hugo和hexo主题">Hugo和hexo主题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/07/07/%E5%AE%89%E5%8D%93%E5%AD%A6%E4%B9%A0%E5%8A%9E%E5%85%ACAPP/" title="安卓学习办公APP">安卓学习办公APP</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2020 – 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">ZR @ Jau Ruei</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">7k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">7 分钟</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2022/04/06/hugo搭建静态博客/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
