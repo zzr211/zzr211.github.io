@@ -1,1 +1,0 @@
-var posts=["2022/04/06/hugo和hexo主题/","2022/09/01/上万部免费资源，都在Emby里/","2022/04/06/hugo搭建静态博客/","2022/08/09/中国传统色配色网站/","2022/07/09/域名比价与注册/","2022/04/21/英语高频单词表NGSL+NAWL/","2022/07/07/安卓学习办公APP/"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};
