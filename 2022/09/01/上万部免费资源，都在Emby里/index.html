@@ -1,343 +1,156 @@
-
-
-<!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=auto>
-
-
-
-<head>
-  <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
-  <link rel="icon" href="/img/fluid.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="Jauruei">
-  <meta name="keywords" content="">
-  
-    <meta name="description" content="轻松接入强大的 Emby 影音库，你的看片神器从今天起就是它了。 # Emby 是什么？ Emby 是一个家庭媒体库软件，包含服务端和客户端。服务端用户整理电影和聚集，客户端连上服务端之后就能播放这些影片。 对于一般用户来说往往需要自己购买 Nas 或者服务器来下载、整理、刮削影片，流程较为复杂。不仅需要自己配置客户端，就连服务端也需要一块儿捣鼓，稍显麻烦。 今天给大家推荐的内容，只需要稍微动动手">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>上万部免费资源，都在Emby里 | Jauruei</title><meta name="keywords" content="影音,NAS"><meta name="author" content="Jauruei"><meta name="copyright" content="Jauruei"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="轻松接入强大的 Emby 影音库，你的看片神器从今天起就是它了。 # Emby 是什么？ Emby 是一个家庭媒体库软件，包含服务端和客户端。服务端用户整理电影和聚集，客户端连上服务端之后就能播放这些影片。 对于一般用户来说往往需要自己购买 Nas 或者服务器来下载、整理、刮削影片，流程较为复杂。不仅需要自己配置客户端，就连服务端也需要一块儿捣鼓，稍显麻烦。 今天给大家推荐的内容，只需要稍微动动手">
 <meta property="og:type" content="article">
 <meta property="og:title" content="上万部免费资源，都在Emby里">
 <meta property="og:url" content="https://jauruei.com/2022/09/01/%E4%B8%8A%E4%B8%87%E9%83%A8%E5%85%8D%E8%B4%B9%E8%B5%84%E6%BA%90%EF%BC%8C%E9%83%BD%E5%9C%A8Emby%E9%87%8C/index.html">
 <meta property="og:site_name" content="Jauruei">
 <meta property="og:description" content="轻松接入强大的 Emby 影音库，你的看片神器从今天起就是它了。 # Emby 是什么？ Emby 是一个家庭媒体库软件，包含服务端和客户端。服务端用户整理电影和聚集，客户端连上服务端之后就能播放这些影片。 对于一般用户来说往往需要自己购买 Nas 或者服务器来下载、整理、刮削影片，流程较为复杂。不仅需要自己配置客户端，就连服务端也需要一块儿捣鼓，稍显麻烦。 今天给大家推荐的内容，只需要稍微动动手">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://imgs.lenovomm.cn/ali/img/pc-appstore/1nud60e3dl6tjtk05x2o.png">
-<meta property="og:image" content="https://imgs.lenovomm.cn/ali/img/pc-appstore/nkx0ugp4g6tw20g4cwv3.png">
-<meta property="og:image" content="https://imgs.lenovomm.cn/ali/img/pc-appstore/1d463zo9r4yk749signe.png">
-<meta property="og:image" content="https://imgs.lenovomm.cn/ali/img/pc-appstore/k8kqx8tc0l9wzwkzol4r.png">
-<meta property="og:image" content="https://imgs.lenovomm.cn/ali/img/pc-appstore/kxu04tej4ol16bqedq16.png">
-<meta property="og:image" content="https://imgs.lenovomm.cn/ali/img/pc-appstore/pc6pwaxndx1c9lg6b92o.png">
-<meta property="og:image" content="https://imgs.lenovomm.cn/ali/img/pc-appstore/b57dfp5p31pp2l55sl3f.png">
-<meta property="og:image" content="https://imgs.lenovomm.cn/ali/img/pc-appstore/tpp7jgpokkl2hw2l3ysx.png">
-<meta property="og:image" content="https://imgs.lenovomm.cn/ali/img/pc-appstore/ayi0m2lfg3m2ele79uyn.png">
-<meta property="og:image" content="https://imgs.lenovomm.cn/ali/img/pc-appstore/zo0bzjo0ef1je9xnbgrm.png">
-<meta property="og:image" content="https://imgs.lenovomm.cn/ali/img/pc-appstore/1fbfjkb1qv8dhoop6jmy.png">
-<meta property="og:image" content="https://imgs.lenovomm.cn/ali/img/pc-appstore/6ibq9ja1dhgwxwd3bt57.png">
-<meta property="og:image" content="https://imgs.lenovomm.cn/ali/img/pc-appstore/2r3j8zbthkqkq6mqv2i7.png">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
 <meta property="article:published_time" content="2022-09-01T07:26:49.000Z">
 <meta property="article:modified_time" content="2023-08-18T13:27:14.244Z">
 <meta property="article:author" content="Jauruei">
 <meta property="article:tag" content="影音">
 <meta property="article:tag" content="NAS">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://imgs.lenovomm.cn/ali/img/pc-appstore/1nud60e3dl6tjtk05x2o.png">
-  
-  
-    <meta name="referrer" content="no-referrer-when-downgrade">
-  
-  
-  <title>上万部免费资源，都在Emby里 - Jauruei</title>
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
-
-
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-<!-- Do not modify the link that theme dependent icons -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
-
-
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
-
-
-<link  rel="stylesheet" href="/css/main.css" />
-
-
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
-  
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
-  
-
-
-
-
-  <script id="fluid-configs">
-    var Fluid = window.Fluid || {};
-    Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"jauruei.com","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":"4065213b4ea31ba78b450aae860b2099","google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":343933,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
-
-    if (CONFIG.web_analytics.follow_dnt) {
-      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
-      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://jauruei.com/2022/09/01/%E4%B8%8A%E4%B8%87%E9%83%A8%E5%85%8D%E8%B4%B9%E8%B5%84%E6%BA%90%EF%BC%8C%E9%83%BD%E5%9C%A8Emby%E9%87%8C/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?4065213b4ea31ba78b450aae860b2099";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
     }
-  </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
-  
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '上万部免费资源，都在Emby里',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-08-18 21:27:14'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
-  
-    <!-- Baidu Analytics -->
-    <script async>
-      if (!Fluid.ctx.dnt) {
-        var _hmt = _hmt || [];
-        (function() {
-          var hm = document.createElement("script");
-          hm.src = "https://hm.baidu.com/hm.js?4065213b4ea31ba78b450aae860b2099";
-          var s = document.getElementsByTagName("script")[0];
-          s.parentNode.insertBefore(hm, s);
-        })();
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
       }
-    </script>
+    }
   
-
-  
-    <!-- Google tag (gtag.js) -->
-    <script async>
-      if (!Fluid.ctx.dnt) {
-        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=", function() {
-          window.dataLayer = window.dataLayer || [];
-          function gtag() {
-            dataLayer.push(arguments);
-          }
-          gtag('js', new Date());
-          gtag('config', '');
-        });
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
       }
-    </script>
+      document.head.appendChild(script)
+    })
   
-
-  
-
-  
-    <!-- 51.la Analytics -->
-    <script async>
-      if (!Fluid.ctx.dnt) {
-        Fluid.utils.createScript('//js.users.51.la/343933.js');
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
       }
-    </script>
-  
-
-  
-
-  
-
-
-
-  
-<meta name="generator" content="Hexo 6.2.0"></head>
-
-
-<body>
-  
-
-  <header>
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
     
-
-<div class="header-inner" style="height: 70vh;">
-  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand" href="/">
-      <strong>千秋万事</strong>
-    </a>
-
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <i class="iconfont icon-home-fill"></i>
-                <span>首页</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                <span>归档</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                <span>分类</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                <span>标签</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                <span>关于</span>
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              <i class="iconfont icon-search"></i>
-            </a>
-          </li>
-          
-        
-        
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
-              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
-            </a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-</nav>
-
-  
-
-<div id="banner" class="banner" parallax=true
-     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
-  <div class="full-bg-img">
-    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-      <div class="banner-text text-center fade-in-up">
-        <div class="h2">
-          
-            <span id="subtitle" data-typed-text="上万部免费资源，都在Emby里"></span>
-          
-        </div>
-
-        
-          
-  <div class="mt-3">
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
     
-    
-      <span class="post-meta">
-        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-09-01 15:26" pubdate>
-          2022年9月1日 下午
-        </time>
-      </span>
-    
-  </div>
-
-  <div class="mt-1">
-    
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-chart"></i>
-        
-          1.1k 字
-        
-      </span>
-    
-
-    
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-clock-fill"></i>
-        
-        
-        
-          10 分钟
-        
-      </span>
-    
-
-    
-    
-  </div>
-
-
-        
-      </div>
-
-      
-    </div>
-  </div>
-</div>
-
-</div>
-
-  </header>
-
-  <main>
-    
-      
-
-<div class="container-fluid nopadding-x">
-  <div class="row nomargin-x">
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-
-    </div>
-
-    <div class="col-lg-8 nopadding-x-md">
-      <div class="container nopadding-x-md" id="board-ctn">
-        <div id="board">
-          <article class="post-content mx-auto">
-            <h1 id="seo-header">上万部免费资源，都在Emby里</h1>
-            
-            
-              <div class="markdown-body">
-                
-                <p>轻松接入强大的 Emby 影音库，你的看片神器从今天起就是它了。</p>
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Jauruei</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">上万部免费资源，都在Emby里</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-09-01T07:26:49.000Z" title="发表于 2022-09-01 15:26:49">2022-09-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-08-18T13:27:14.244Z" title="更新于 2023-08-18 21:27:14">2023-08-18</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="上万部免费资源，都在Emby里"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>轻松接入强大的 Emby 影音库，你的看片神器从今天起就是它了。</p>
 <h2 id="emby是什么"><a class="markdownIt-Anchor" href="#emby是什么">#</a> Emby 是什么？</h2>
 <p>Emby 是一个家庭媒体库软件，包含服务端和客户端。服务端用户整理电影和聚集，客户端连上服务端之后就能播放这些影片。</p>
 <p>对于一般用户来说往往需要自己购买 Nas 或者服务器来下载、整理、刮削影片，流程较为复杂。不仅需要自己配置客户端，就连服务端也需要一块儿捣鼓，稍显麻烦。</p>
@@ -349,7 +162,7 @@
 <p>大家最常用的是 Windows😎，今天就只讲 Windows 好了。</p>
 <h2 id="一-获取-emby-windows-客户端"><a class="markdownIt-Anchor" href="#一-获取-emby-windows-客户端">#</a> 一、获取 Emby Windows 客户端</h2>
 <p>Emby 这个客户端本来没有什么特殊的，除了价格比较贵一点之外，也没什么毛病。就不知道这个价格你能不能承受了。</p>
-<p><img src="https://imgs.lenovomm.cn/ali/img/pc-appstore/1nud60e3dl6tjtk05x2o.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://imgs.lenovomm.cn/ali/img/pc-appstore/1nud60e3dl6tjtk05x2o.png" alt="img"></p>
 <p>每月 4.99 刀、每年 54 刀、终身包断 119 刀，而且仅支持 Paypal 和信用卡支付，对国内的用户来说，支持不算友好。</p>
 <p>注意！注意！注意！</p>
 <p>如果你没有 Paypal ，也没有外币信用卡，<strong>还有个方法能够让你使用到 Emby</strong> 👇</p>
@@ -357,404 +170,34 @@
 <p>一阵操作之后，我相信你也成功安装上了 Emby Windows 版。</p>
 <h2 id="二-获取服务器线路"><a class="markdownIt-Anchor" href="#二-获取服务器线路">#</a> 二、获取服务器线路</h2>
 <p>打开你的电报，在搜索框搜索 [Emby 影视资源发布]，或搜索账号 [ @Plus_Movie_Best ] 关注该频道：</p>
-<p><img src="https://imgs.lenovomm.cn/ali/img/pc-appstore/nkx0ugp4g6tw20g4cwv3.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://imgs.lenovomm.cn/ali/img/pc-appstore/nkx0ugp4g6tw20g4cwv3.png" alt="img"></p>
 <p>关注并进入频道后，点击顶部置顶消息，查看线路指引：</p>
-<p><img src="https://imgs.lenovomm.cn/ali/img/pc-appstore/1d463zo9r4yk749signe.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://imgs.lenovomm.cn/ali/img/pc-appstore/1d463zo9r4yk749signe.png" alt="img"></p>
 <p>点击红框链接后，便跳转到线路列表：</p>
-<p><img src="https://imgs.lenovomm.cn/ali/img/pc-appstore/k8kqx8tc0l9wzwkzol4r.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://imgs.lenovomm.cn/ali/img/pc-appstore/k8kqx8tc0l9wzwkzol4r.png" alt="img"></p>
 <p>除了上述的 [@Plus_Movie_Best] 频道外，还有 [ @curly_mouse ] 交流群，查看置顶消息获取线路：</p>
-<p><img src="https://imgs.lenovomm.cn/ali/img/pc-appstore/kxu04tej4ol16bqedq16.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://imgs.lenovomm.cn/ali/img/pc-appstore/kxu04tej4ol16bqedq16.png" alt="img"></p>
 <p>线路获取方式都类似，这里就不多演示了。</p>
 <p>获取线路后，请及时保存，待后续 Emby 客户端配置使用。</p>
 <h2 id="三-配置-emby-windows-客户端"><a class="markdownIt-Anchor" href="#三-配置-emby-windows-客户端">#</a> 三、配置 Emby Windows 客户端</h2>
 <p>打开刚才修改好的 Emby 文件夹，双击 Emby.Theater.exe ：</p>
-<p><img src="https://imgs.lenovomm.cn/ali/img/pc-appstore/pc6pwaxndx1c9lg6b92o.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://imgs.lenovomm.cn/ali/img/pc-appstore/pc6pwaxndx1c9lg6b92o.png" alt="img"></p>
 <p>等 Emby 加载一下：</p>
-<p><img src="https://imgs.lenovomm.cn/ali/img/pc-appstore/b57dfp5p31pp2l55sl3f.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://imgs.lenovomm.cn/ali/img/pc-appstore/b57dfp5p31pp2l55sl3f.png" alt="img"></p>
 <p>加载完成后，选择 下一个：</p>
-<p><img src="https://imgs.lenovomm.cn/ali/img/pc-appstore/tpp7jgpokkl2hw2l3ysx.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://imgs.lenovomm.cn/ali/img/pc-appstore/tpp7jgpokkl2hw2l3ysx.png" alt="img"></p>
 <p>此时会提示 通过 Emby Connect 登录，选择 跳过 ：</p>
-<p><img src="https://imgs.lenovomm.cn/ali/img/pc-appstore/ayi0m2lfg3m2ele79uyn.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://imgs.lenovomm.cn/ali/img/pc-appstore/ayi0m2lfg3m2ele79uyn.png" alt="img"></p>
 <p>跳过之后，来到登录服务器的页面 ：</p>
-<p><img src="https://imgs.lenovomm.cn/ali/img/pc-appstore/zo0bzjo0ef1je9xnbgrm.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://imgs.lenovomm.cn/ali/img/pc-appstore/zo0bzjo0ef1je9xnbgrm.png" alt="img"></p>
 <p>输入刚刚获得的线路信息，并点击连接：</p>
-<p><img src="https://imgs.lenovomm.cn/ali/img/pc-appstore/1fbfjkb1qv8dhoop6jmy.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://imgs.lenovomm.cn/ali/img/pc-appstore/1fbfjkb1qv8dhoop6jmy.png" alt="img"></p>
 <p>服务器成功登录后，会提醒输入用户名和密码，以 普拉斯 为例，它的线路消息中会包含账号密码信息，填写后登录即可：</p>
-<p><img src="https://imgs.lenovomm.cn/ali/img/pc-appstore/6ibq9ja1dhgwxwd3bt57.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://imgs.lenovomm.cn/ali/img/pc-appstore/6ibq9ja1dhgwxwd3bt57.png" alt="img"></p>
 <p>登录成功后，你会看到满屏的剧集资源：</p>
-<p><img src="https://imgs.lenovomm.cn/ali/img/pc-appstore/2r3j8zbthkqkq6mqv2i7.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://imgs.lenovomm.cn/ali/img/pc-appstore/2r3j8zbthkqkq6mqv2i7.png" alt="img"></p>
 <p><strong>恭喜你，已经成功上车！</strong></p>
 <p>由于是共享账号，所以可能会存在观看记录被覆盖的情况，忍忍吧，还要啥自行车？</p>
 <p>对了，如果你要增加多个播放服务器，可以点击右上角的搜索旁边的头像，在设置中点击 “选择服务器” &gt; “添加服务器”。</p>
 <p>🤫祝你们观影愉快！</p>
-
-                
-              </div>
-            
-            <hr/>
-            <div>
-              <div class="post-metas my-3">
-  
-  
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/%E5%BD%B1%E9%9F%B3/" class="print-no-link">#影音</a>
-      
-        <a href="/tags/NAS/" class="print-no-link">#NAS</a>
-      
-    </div>
-  
-</div>
-
-
-              
-  
-
-  <div class="license-box my-3">
-    <div class="license-title">
-      <div>上万部免费资源，都在Emby里</div>
-      <div>https://jauruei.com/2022/09/01/上万部免费资源，都在Emby里/</div>
-    </div>
-    <div class="license-meta">
-      
-        <div class="license-meta-item">
-          <div>作者</div>
-          <div>Jauruei</div>
-        </div>
-      
-      
-        <div class="license-meta-item license-meta-date">
-          <div>发布于</div>
-          <div>2022年9月1日</div>
-        </div>
-      
-      
-      
-        <div class="license-meta-item">
-          <div>许可协议</div>
-          <div>
-            
-              
-              
-                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
-                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
-                    <i class="iconfont icon-by"></i>
-                  </span>
-                </a>
-              
-            
-          </div>
-        </div>
-      
-    </div>
-    <div class="license-icon iconfont"></div>
-  </div>
-
-
-
-              
-                <div class="post-prevnext my-3">
-                  <article class="post-prev col-6">
-                    
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="/2022/08/09/%E4%B8%AD%E5%9B%BD%E4%BC%A0%E7%BB%9F%E8%89%B2%E9%85%8D%E8%89%B2%E7%BD%91%E7%AB%99/" title="中国传统色配色网站">
-                        <span class="hidden-mobile">中国传统色配色网站</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
-                </div>
-              
-            </div>
-
-            
-          </article>
-        </div>
-      </div>
-    </div>
-
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-  <aside class="sidebar" style="margin-left: -1rem">
-    <div id="toc">
-  <p class="toc-header">
-    <i class="iconfont icon-list"></i>
-    <span>目录</span>
-  </p>
-  <div class="toc-body" id="toc-body"></div>
-</div>
-
-
-
-  </aside>
-
-
-    </div>
-  </div>
-</div>
-
-
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-
-
-
-
-    
-
-    
-      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-      </a>
-    
-
-    
-      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-    
-
-    
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-  
-    <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
-    </div>
-  
-  
-    <div class="statistics">
-  
-  
-
-  
-    
-      <span id="busuanzi_container_site_pv" style="display: none">
-        总访问量 
-        <span id="busuanzi_value_site_pv"></span>
-         次
-      </span>
-    
-    
-      <span id="busuanzi_container_site_uv" style="display: none">
-        总访客数 
-        <span id="busuanzi_value_site_uv"></span>
-         人
-      </span>
-    
-    
-  
-</div>
-
-  
-  
-  
-</div>
-
-  </footer>
-
-  <!-- Scripts -->
-  
-  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
-
-  <script>
-    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
-    NProgress.start()
-    window.addEventListener('load', function() {
-      NProgress.done();
-    })
-  </script>
-
-
-<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
-<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
-
-
-  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var subtitle = document.getElementById('subtitle');
-      if (!subtitle || !typing) {
-        return;
-      }
-      var text = subtitle.getAttribute('data-typed-text');
-      
-        typing(text);
-      
-    })(window, document);
-  </script>
-
-
-
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
-
-
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
-    var toc = jQuery('#toc');
-    if (toc.length === 0 || !window.tocbot) { return; }
-    var boardCtn = jQuery('#board-ctn');
-    var boardTop = boardCtn.offset().top;
-
-    window.tocbot.init(Object.assign({
-      tocSelector     : '#toc-body',
-      contentSelector : '.markdown-body',
-      linkClass       : 'tocbot-link',
-      activeLinkClass : 'tocbot-active-link',
-      listClass       : 'tocbot-list',
-      isCollapsedClass: 'tocbot-is-collapsed',
-      collapsibleClass: 'tocbot-is-collapsible',
-      scrollSmooth    : true,
-      includeTitleTags: true,
-      headingsOffset  : -boardTop,
-    }, CONFIG.toc));
-    if (toc.find('.toc-list-item').length > 0) {
-      toc.css('visibility', 'visible');
-    }
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('tocbot' in window) {
-        tocbot.refresh();
-        var toc = jQuery('#toc');
-        if (toc.length === 0 || !tocbot) {
-          return;
-        }
-        if (toc.find('.toc-list-item').length > 0) {
-          toc.css('visibility', 'visible');
-        }
-      }
-    });
-  });
-</script>
-
-
-  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
-
-  <script>Fluid.plugins.codeWidget();</script>
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
-    window.anchors.options = {
-      placement: CONFIG.anchorjs.placement,
-      visible  : CONFIG.anchorjs.visible
-    };
-    if (CONFIG.anchorjs.icon) {
-      window.anchors.options.icon = CONFIG.anchorjs.icon;
-    }
-    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-    var res = [];
-    for (var item of el) {
-      res.push('.markdown-body > ' + item.trim());
-    }
-    if (CONFIG.anchorjs.placement === 'left') {
-      window.anchors.options.class = 'anchorjs-link-left';
-    }
-    window.anchors.add(res.join(', '));
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('anchors' in window) {
-        anchors.removeAll();
-        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-        var res = [];
-        for (var item of el) {
-          res.push('.markdown-body > ' + item.trim());
-        }
-        if (CONFIG.anchorjs.placement === 'left') {
-          anchors.options.class = 'anchorjs-link-left';
-        }
-        anchors.add(res.join(', '));
-      }
-    });
-  });
-</script>
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
-    Fluid.plugins.fancyBox();
-  });
-</script>
-
-
-  <script>Fluid.plugins.imageCaption();</script>
-
-  <script  src="/js/local-search.js" ></script>
-
-  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
-
-
-
-
-
-<!-- 主题的启动项，将它保持在最底部 -->
-<!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
-
-
-  
-
-  <noscript>
-    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
-  </noscript>
-<!-- hexo injector body_end start --><script src="/jquery.js"></script><!-- hexo injector body_end end --></body>
-</html>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://jauruei.com">Jauruei</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://jauruei.com/2022/09/01/%E4%B8%8A%E4%B8%87%E9%83%A8%E5%85%8D%E8%B4%B9%E8%B5%84%E6%BA%90%EF%BC%8C%E9%83%BD%E5%9C%A8Emby%E9%87%8C/">https://jauruei.com/2022/09/01/%E4%B8%8A%E4%B8%87%E9%83%A8%E5%85%8D%E8%B4%B9%E8%B5%84%E6%BA%90%EF%BC%8C%E9%83%BD%E5%9C%A8Emby%E9%87%8C/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://jauruei.com" target="_blank">Jauruei</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%BD%B1%E9%9F%B3/">影音</a><a class="post-meta__tags" href="/tags/NAS/">NAS</a></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/08/09/%E4%B8%AD%E5%9B%BD%E4%BC%A0%E7%BB%9F%E8%89%B2%E9%85%8D%E8%89%B2%E7%BD%91%E7%AB%99/"><img class="next-cover" src="/" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">中国传统色配色网站</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Jauruei</div><div class="author-info__description">Jauruei的学习&折腾笔记</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#emby%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-number">1.</span> <span class="toc-text"> Emby 是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80-%E8%8E%B7%E5%8F%96-emby-windows-%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="toc-number">2.</span> <span class="toc-text"> 一、获取 Emby Windows 客户端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-%E8%8E%B7%E5%8F%96%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BA%BF%E8%B7%AF"><span class="toc-number">3.</span> <span class="toc-text"> 二、获取服务器线路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89-%E9%85%8D%E7%BD%AE-emby-windows-%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="toc-number">4.</span> <span class="toc-text"> 三、配置 Emby Windows 客户端</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><div class="content"><a class="title" href="/2022/09/01/%E4%B8%8A%E4%B8%87%E9%83%A8%E5%85%8D%E8%B4%B9%E8%B5%84%E6%BA%90%EF%BC%8C%E9%83%BD%E5%9C%A8Emby%E9%87%8C/" title="上万部免费资源，都在Emby里">上万部免费资源，都在Emby里</a><time datetime="2022-09-01T07:26:49.000Z" title="发表于 2022-09-01 15:26:49">2022-09-01</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2022/08/09/%E4%B8%AD%E5%9B%BD%E4%BC%A0%E7%BB%9F%E8%89%B2%E9%85%8D%E8%89%B2%E7%BD%91%E7%AB%99/" title="中国传统色配色网站">中国传统色配色网站</a><time datetime="2022-08-09T12:28:36.000Z" title="发表于 2022-08-09 20:28:36">2022-08-09</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2022/07/09/%E5%9F%9F%E5%90%8D%E6%AF%94%E4%BB%B7%E4%B8%8E%E6%B3%A8%E5%86%8C/" title="域名比价与注册">域名比价与注册</a><time datetime="2022-07-09T06:14:13.000Z" title="发表于 2022-07-09 14:14:13">2022-07-09</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2022/04/21/%E8%8B%B1%E8%AF%AD%E9%AB%98%E9%A2%91%E5%8D%95%E8%AF%8D%E8%A1%A8NGSL+NAWL/" title="英语高频单词表NGSL+NAWL">英语高频单词表NGSL+NAWL</a><time datetime="2022-04-21T06:36:35.000Z" title="发表于 2022-04-21 14:36:35">2022-04-21</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Jauruei</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script src="/jquery.js"></script><!-- hexo injector body_end end --></body></html>
